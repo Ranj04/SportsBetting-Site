@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #D4AF37;
+  --gold-light: #E5C564;
+  --gold-dark: #B8960C;
+  --crimson: #8B1538;
+  --crimson-light: #A62626;
+  --navy: #002244;
+  --carbon: #1A1A1A;
+  --carbon-dark: #0D0D0D;
+  --silver: #C0C0C0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--carbon-dark);
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Carbon fiber texture background */
+.bg-carbon-texture {
+  background-color: #0d0d0d;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Metallic gold button */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  color: #0d0d0d;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+}
+
+/* Crimson accent border */
+.border-crimson-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(var(--carbon), var(--carbon)) padding-box,
+              linear-gradient(135deg, var(--crimson-light), var(--crimson), var(--crimson-light)) border-box;
+}
+
+/* Card with metallic border */
+.card-metallic {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(13, 13, 13, 0.95));
+  border: 1px solid rgba(192, 192, 192, 0.2);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.card-metallic:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Social icon hover effects */
+.social-icon {
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1) translateY(-3px);
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--carbon-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* League badge styling */
+.league-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.league-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.league-badge:hover::before {
+  left: 100%;
+}
+
+/* Logo glow effect - smooth infinite pulse */
+.logo-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(212, 175, 55, 0.4) 0%,
+    rgba(212, 175, 55, 0.2) 30%,
+    rgba(139, 21, 56, 0.1) 60%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  animation: logo-pulse 3s ease-in-out infinite;
+}
+
+@keyframes logo-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Background floating animations */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  75% {
+    transform: translate(10px, 10px) scale(1.02);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-25px, 25px);
+  }
+  66% {
+    transform: translate(25px, -15px);
+  }
+}
+
+@keyframes float-slower {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-40px, -40px) rotate(5deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(-10%) translateY(-10%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(10%) translateY(10%);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 15s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float-slower 25s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 30s ease-in-out infinite;
+}
