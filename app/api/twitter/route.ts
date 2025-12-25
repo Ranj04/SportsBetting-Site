@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server'
 
+// Force dynamic to prevent build-time API calls
+export const dynamic = 'force-dynamic'
+
 const TWITTER_BEARER_TOKEN = process.env.TWITTER_BEARER_TOKEN
 const TWITTER_USERNAME = process.env.TWITTER_USERNAME || 'sussweatshop'
 

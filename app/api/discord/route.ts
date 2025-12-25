@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server'
 
+// Force dynamic to prevent build-time API calls
+export const dynamic = 'force-dynamic'
+
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN
 const CHANNEL_ID = '1425704967024414821'
 
