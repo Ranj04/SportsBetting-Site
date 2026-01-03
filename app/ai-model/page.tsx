@@ -1,4 +1,5 @@
 import PageLayout from '@/components/PageLayout'
+import WhopBanner from '@/components/WhopBanner'
 
 export default function AIModelPage() {
   const features = [
@@ -156,6 +157,9 @@ export default function AIModelPage() {
           </div>
         </div>
       </section>
+
+      {/* Whop Premium Banner */}
+      <WhopBanner />
     </PageLayout>
   )
 }

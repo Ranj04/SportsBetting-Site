@@ -5,6 +5,7 @@
 export const socialLinks = {
   discord: 'https://discord.gg/ZNwbqrCGqN',
   twitter: 'https://x.com/SusSweatShop',
+  whop: 'https://whop.com/sussweatshop/?productId=prod_lxOdMfmd1aaf5&a=ranj4',
 }
 
 // Your Twitter username (without @) for the live feed
@@ -13,7 +14,7 @@ export const twitterUsername = 'SusSweatShop'
 // Marketing stats - update these as needed
 export const stats = {
   unitsUp: '+250',
-  winRate: '67%',
+  winRate: '72%',
   monthlyROI: '+42%',
   members: '1,500+',
 }

@@ -257,3 +257,111 @@ body {
 .animate-gradient-shift {
   animation: gradient-shift 30s ease-in-out infinite;
 }
+
+/* Hide any arrow elements between stat cards */
+.grid.grid-cols-2::before,
+.grid.grid-cols-2::after,
+.grid.grid-cols-2 > *::before,
+.grid.grid-cols-2 > *::after {
+  display: none !important;
+  content: none !important;
+}
+
+.grid.grid-cols-2 svg[class*="arrow"],
+.grid.grid-cols-2 svg[class*="Arrow"],
+.grid.grid-cols-2 [class*="arrow"],
+.grid.grid-cols-2 [class*="Arrow"],
+.grid.grid-cols-2 svg.text-gold,
+.grid.grid-cols-2 > svg {
+  display: none !important;
+}
+
+/* Hide arrow between first two cards specifically */
+.grid.grid-cols-2 > *:nth-child(1)::after,
+.grid.grid-cols-2 > *:nth-child(2)::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* ============================================
+   WHOP SECTION PREMIUM STYLES
+   ============================================ */
+
+/* Purple-gold gradient text for Whop */
+.whop-text-gradient {
+  background: linear-gradient(135deg, #A855F7 0%, #7C3AED 30%, var(--gold) 70%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Main Whop card with premium border */
+.whop-card {
+  background: linear-gradient(145deg, rgba(26, 16, 37, 0.95), rgba(13, 13, 13, 0.98));
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.whop-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.5), var(--gold), rgba(168, 85, 247, 0.5), transparent);
+}
+
+.whop-card:hover {
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 60px rgba(124, 58, 237, 0.15), 0 0 30px rgba(212, 175, 55, 0.1);
+}
+
+/* Inner CTA card */
+.whop-cta-card {
+  background: linear-gradient(145deg, rgba(124, 58, 237, 0.1), rgba(13, 13, 13, 0.8));
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+/* Whop premium button */
+.whop-btn {
+  background: linear-gradient(135deg, #9333EA 0%, #7C3AED 50%, #6D28D9 100%);
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+}
+
+.whop-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.6), 0 0 20px rgba(212, 175, 55, 0.2);
+  background: linear-gradient(135deg, #A855F7 0%, #8B5CF6 50%, #7C3AED 100%);
+}
+
+/* Shimmer effect for Whop card */
+.whop-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(124, 58, 237, 0.05) 25%,
+    rgba(212, 175, 55, 0.08) 50%,
+    rgba(124, 58, 237, 0.05) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: whop-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes whop-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

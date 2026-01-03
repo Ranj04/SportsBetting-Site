@@ -4,6 +4,7 @@ import BettingPlatforms from '@/components/BettingPlatforms'
 import SportsLeagues from '@/components/SportsLeagues'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Testimonials from '@/components/Testimonials'
+import WhopSection from '@/components/WhopSection'
 import TwitterFeed from '@/components/TwitterFeed'
 import SocialLinks from '@/components/SocialLinks'
 import Footer from '@/components/Footer'
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <StatsBar />
         <BettingPlatforms />
+        <WhopSection />
         <SportsLeagues />
         <WhyChooseUs />
         <Testimonials />

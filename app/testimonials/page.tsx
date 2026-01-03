@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import PageLayout from '@/components/PageLayout'
+import WhopBanner from '@/components/WhopBanner'
 
 interface TestimonialMessage {
   id: string
@@ -177,6 +178,9 @@ export default function TestimonialsPage() {
           )}
         </div>
       </section>
+
+      {/* Whop Premium Banner */}
+      <WhopBanner />
 
       {/* Image Modal */}
       {selectedImage && (

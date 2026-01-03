@@ -1,4 +1,5 @@
 import PageLayout from '@/components/PageLayout'
+import WhopBanner from '@/components/WhopBanner'
 
 export default function AboutPage() {
   const teamValues = [
@@ -160,6 +161,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Whop Premium Banner */}
+      <WhopBanner />
 
       {/* Contact Section */}
       <section className="py-16 px-4">
