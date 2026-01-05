@@ -24,10 +24,23 @@ export default function Footer() {
             Must be 21+ to participate in sports betting.
           </p>
 
-          {/* Copyright */}
-          <p className="text-silver-dark text-sm">
-            &copy; {currentYear} SUSSWEATSHOP. All rights reserved.
-          </p>
+          {/* Copyright & Credits */}
+          <div className="text-center md:text-right">
+            <p className="text-silver-dark text-sm">
+              &copy; {currentYear} SUSSWEATSHOP. All rights reserved.
+            </p>
+            <p className="text-silver-dark/60 text-xs mt-1">
+              Developed by{' '}
+              <a
+                href="https://www.linkedin.com/in/ranjiv-jithendran/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-silver-dark hover:text-gold transition-colors"
+              >
+                Ranjiv Jithendran
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

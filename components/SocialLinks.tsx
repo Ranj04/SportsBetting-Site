@@ -37,9 +37,12 @@ export default function SocialLinks() {
             <div className="text-center">
               <h3 className="font-display text-xl font-bold text-white mb-1">Discord Server</h3>
               <p className="text-silver text-sm">Daily picks & live chat</p>
+              <span className="inline-block mt-2 px-2 py-0.5 text-xs font-semibold text-green-400 bg-green-400/10 border border-green-400/30 rounded-full">
+                FREE
+              </span>
             </div>
             <span className="btn-gold text-sm px-6 py-2 group-hover:scale-105 transition-transform">
-              Join Now
+              Join Free
             </span>
           </a>
 

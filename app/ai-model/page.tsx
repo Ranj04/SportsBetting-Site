@@ -70,8 +70,14 @@ export default function AIModelPage() {
             betting model analyzes thousands of variables to deliver consistent, profitable picks.
           </p>
 
-          <div className="text-silver/60 text-sm">
-            Content coming soon - check back for detailed information about our AI technology.
+          {/* AI Model Pricing Note */}
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gold/5 border border-gold/20">
+            <svg className="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p className="text-silver text-sm">
+              <span className="text-gold font-semibold">AI Model Access</span> is available at a slightly higher price than our premium subscription for exclusive, data-driven picks.
+            </p>
           </div>
         </div>
       </section>
