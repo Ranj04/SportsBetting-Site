@@ -27,13 +27,6 @@
 
 ---
 
-## 📸 Screenshots
-
-> Screenshots live in [`docs/screenshots/`](docs/screenshots/). See that folder's README for how to capture them.
-
-| Home | Testimonials (Discord) | VIP Section |
-|------|------------------------|-------------|
-| ![Home](docs/screenshots/home.png) | ![Testimonials](docs/screenshots/testimonials.png) | ![VIP](docs/screenshots/vip.png) |
 
 ---
 

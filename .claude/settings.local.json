@@ -9,7 +9,13 @@
       "Bash(curl:*)",
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "WebFetch(domain:x.com)",
+      "Bash(git check-ignore *)",
+      "Bash(xargs wc -l)",
+      "Bash(npm test *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(git rm *)"
     ]
   }
 }
