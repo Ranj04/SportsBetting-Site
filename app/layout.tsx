@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Sidebar from '@/components/Sidebar'
+import ScrollReveal from '@/components/ScrollReveal'
 import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-carbon-texture min-h-screen">
         <Sidebar />
+        <ScrollReveal />
         {children}
         <Analytics />
       </body>

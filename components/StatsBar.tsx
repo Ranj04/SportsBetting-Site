@@ -1,6 +1,7 @@
 'use client'
 
 import { stats } from '@/config/social-links'
+import CountUp from './CountUp'
 
 export default function StatsBar() {
   const statItems = [
@@ -41,7 +42,7 @@ export default function StatsBar() {
             >
               <div className="text-2xl mb-1">{stat.icon}</div>
               <div className={`font-display text-2xl md:text-3xl font-bold ${stat.color}`}>
-                {stat.value}
+                <CountUp value={stat.value} />
               </div>
               <div className="text-silver text-xs md:text-sm uppercase tracking-wider">
                 {stat.label}

@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-carbon-dark via-carbon to-carbon-dark opacity-90" />
 
 
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto animate-hero-in">
         {/* Logo */}
         <div className="mb-8 flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
@@ -27,7 +27,7 @@ export default function Hero() {
 
         {/* Tagline */}
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-wider">
-          <span className="text-gold-gradient">PREMIUM</span>
+          <span className="text-gold-shimmer">PREMIUM</span>
           <span className="text-white"> SPORTS BETTING</span>
         </h1>
 
@@ -76,6 +76,17 @@ export default function Hero() {
           ))}
         </div>
       </div>
+
+      {/* Scroll cue */}
+      <a
+        href="#feed"
+        aria-label="Scroll to content"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-gold/70 hover:text-gold transition-colors animate-bob"
+      >
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
     </section>
   )
 }

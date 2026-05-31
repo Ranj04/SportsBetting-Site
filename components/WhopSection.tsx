@@ -35,17 +35,63 @@ export default function WhopSection() {
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 mb-6">
-            <span className="text-gold text-sm font-semibold tracking-wide">PREMIUM MEMBERSHIP</span>
+        <div className="relative text-center mb-12">
+          {/* Ambient animation layer behind the heading */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+            {/* Breathing gold aura */}
+            <div className="absolute left-1/2 top-1/2 w-[440px] h-[260px] -translate-x-1/2 -translate-y-1/2
+                            rounded-full bg-gold/20 blur-3xl animate-vip-glow" />
+
+            {/* Slowly rotating spotlight rays */}
+            <div
+              className="absolute left-1/2 top-1/2 w-[560px] h-[560px] opacity-[0.06] animate-vip-rays"
+              style={{
+                background:
+                  'conic-gradient(from 0deg, transparent 0deg, rgba(212,175,55,0.7) 10deg, transparent 22deg, transparent 90deg, rgba(212,175,55,0.6) 100deg, transparent 112deg, transparent 180deg, rgba(212,175,55,0.7) 190deg, transparent 202deg, transparent 270deg, rgba(212,175,55,0.6) 280deg, transparent 292deg)',
+                maskImage: 'radial-gradient(circle, black 0%, transparent 62%)',
+                WebkitMaskImage: 'radial-gradient(circle, black 0%, transparent 62%)',
+              }}
+            />
+
+            {/* Rising gold embers */}
+            {[
+              { left: '10%', size: 4, delay: '0s', dur: '7s' },
+              { left: '22%', size: 3, delay: '2.4s', dur: '9s' },
+              { left: '34%', size: 5, delay: '1s', dur: '8s' },
+              { left: '46%', size: 3, delay: '3.6s', dur: '10s' },
+              { left: '57%', size: 4, delay: '0.8s', dur: '7.5s' },
+              { left: '68%', size: 3, delay: '2s', dur: '9.5s' },
+              { left: '80%', size: 5, delay: '1.6s', dur: '8.5s' },
+              { left: '91%', size: 4, delay: '3s', dur: '7s' },
+            ].map((ember, i) => (
+              <span
+                key={i}
+                className="absolute bottom-2 rounded-full bg-gradient-to-t from-gold-dark to-gold-light animate-ember"
+                style={{
+                  left: ember.left,
+                  width: `${ember.size}px`,
+                  height: `${ember.size}px`,
+                  animationDelay: ember.delay,
+                  animationDuration: ember.dur,
+                  boxShadow: '0 0 6px rgba(212,175,55,0.6)',
+                }}
+              />
+            ))}
           </div>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            <span className="text-white">UNLOCK </span>
-            <span className="text-gold-gradient">VIP ACCESS</span>
-          </h2>
-          <p className="text-silver max-w-2xl mx-auto text-lg">
-            Take your betting to the next level with our premium Whop membership
-          </p>
+
+          {/* Header content (above the ambient layer) */}
+          <div className="relative z-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 mb-6">
+              <span className="text-gold text-sm font-semibold tracking-wide">PREMIUM MEMBERSHIP</span>
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <span className="text-white">UNLOCK </span>
+              <span className="text-gold-gradient">VIP ACCESS</span>
+            </h2>
+            <p className="text-silver max-w-2xl mx-auto text-lg">
+              Take your betting to the next level with our premium Whop membership
+            </p>
+          </div>
         </div>
 
         {/* Main Premium Card */}
